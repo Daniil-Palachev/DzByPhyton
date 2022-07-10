@@ -3,7 +3,10 @@
 x = int(input("Введи 0 или 1 для x: "))
 y = int(input("Введи 0 или 1 для y: "))
 z = int(input("Введи 0 или 1 для z: "))
-left = not (x or y or z)
-right = not x and not y and not z
-res = left == right
+res = True
+for x in True, False:
+    for y in True, False:
+        for z in True, False:
+            res = res and (not(x or y or z) == (not x and not y and not z))
+
 print (res)
