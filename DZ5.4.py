@@ -11,7 +11,7 @@ def read_text(words: str):
 
 def zip_data(text: str):
     out = "".join([f"{i}{len(list(j))}" for i, j in groupby(text)])
-    with open('out.txt', 'w', encoding='utf-8') as file:  
+    with open('C:\\Users\\админ\\Desktop\\ДЗ\\python\\DZ\\out.txt', 'w', encoding='utf-8') as file:  
         file.write(out)
     return out
 
