@@ -9,3 +9,26 @@
 # Если нет — удаляется. Суммой очков называется сложение порядковых номеров букв в слове. Порядковые номера смотрите в этой таблице, в третьем столбце: https://www.charset.org/utf-8
 # Это — 16-ричная система, поищите, как правильнее и быстрее получать эти символы.
 # Cложите получившиеся числа и верните из функции в качестве ответа вместе с преобразованным списком
+
+def pl_list():
+    with open('C:\\Users\\админ\\Desktop\ДЗ\\python\\DZ\\lng_name.txt', encoding='utf-8') as file:
+        language_name= file.read().split('\n')
+        num= list(range(1, len(language_name)+1))
+        kortezh = zip(num, [word.upper() for word in language_name])
+        return list(kortezh)
+
+def parse_symb(list):
+    result=[]
+    for i in list:
+        sumsymb=0
+        for g in i[1]:
+            sumsymb+= ord(g)
+        if sumsymb%i[0]==0:
+            result.append((sumsymb, i[1]))
+    print(result)
+
+parse_symb(pl_list())
+
+
+
+
