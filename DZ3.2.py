@@ -5,8 +5,6 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-lst1 = [2, 3, 4, 5, 6]
-lst2 = [2, 3, 5, 6]
 def mult_of_pairs(lst: list) -> list:
     result = []
     first_index = 0
